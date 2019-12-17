@@ -1,0 +1,96 @@
+Users:
+- Admin 
+- Exam Setter
+- Supervisor
+- Student (Examinee)
+
+----------------------------------------------
+
+SRS for Exam System
+
+R1 : Admin
+    R1.1 Login
+        Input: User login credentials.
+        Output: Confirmation of Authorization and redirect to dashboard.
+        Exception Flow: If credentials are not met, redirect to login page.
+
+    R1.2 Manage Users
+        R1.2.1 Add User
+            Input: User Details.
+            Output: Confirmation of user creation.
+            Exception Flow: If details are invalid. validation message is show.
+        R1.2.2 Edit User
+            Input: Updated Details.
+            Output: Confirmation of user details updation.
+            Exception Flow: If details are invalid. validation message is show.
+        R1.2.3 Delete User
+            Input: User selection.
+            Output: Confirmation of user deletion.
+        R1.2.4 View User Details
+            Input: User selection.
+            Output: Details of user.
+            
+    R1.3 Manage Exam
+        R1.3.1 Block Exam schedule.
+            Input: Scheduled exam selection.
+            Output: Confirmation of blocking exam schedule.
+
+        R1.3.2 Update Exam Schedule
+            Input: Updated schedule details for an exam.
+            Output: Confirmation of exam schedule updation.
+    
+    R1.4 Manage User Role
+        R1.4.1 Define User Role
+            Input: Selection of user role.
+            Output: Confirmation of user role updation.
+            Exception Flow: If user role is not available, detailed message is thrown.
+    
+    R1.5 Manage Users
+        R1.5.1 Add User
+            Input: User Details.
+            Output: Confirmation of user creation.
+            Exception Flow: If details are invalid. validation message is show.
+        R1.5.2 Edit User
+            Input: Updated Details.
+            Output: Confirmation of user details updation.
+            Exception Flow: If details are invalid. validation message is show.
+        R1.5.3 delete User
+            Input: User selection.
+            Output: Confirmation of user deletion.
+        R1.5.4 View User Details
+            Input: User selection.
+            Output: Details of user.
+
+R4 : Examinee Functionalities
+    R4.1 Login
+        Input: User login credentials.
+        Output: Confirmation of Authorization and redirect to dashboard.
+        Exception Flow: If credentials are not met, redirect to login page.
+
+    R4.2 Manage Exams
+        R4.2.1 View Exam Details.
+            Input: Exam Selection.
+            Output: Exam Details.
+        R4.2.2 Opt-in an exam
+            Input: Selection of exam to opt-in.
+            Output: Opt-in sign.
+        R4.2.3 Start Exam
+            Input: Exam initiation key.
+            Output: Question paper.
+        R4.2.4 End Exam
+            Input: Submition of answers.
+            Output: Confirmation of submition.
+    
+    R4.3 View profile.
+        R4.3.1 View profile.
+            Input: User Command.
+            Output: Profile of examinee.
+    
+    R4.4 Manage Answers.
+        R4.4.1 Set answer.
+            Input: User selection.
+            Output: Confirmation for answer set.
+        R4.4.2 Flag answer.
+            Input: User Command.
+            Output: Confirmation for answer flag.
+        
