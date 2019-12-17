@@ -1,0 +1,220 @@
+************************************
+**** PARIKSHA - THE EXAM SYSTEM ****
+************************************
+
+Pariksha is the exam system which provides convinient environment to take and Schedule exams. 
+Simple and Adaptable interface allows the sytem to make the exam process clear, transparent and error-free.
+Using the statistical reports university and students can measure and improve their performance.
+
+Users:
+- Admin 
+- Exam Setter
+- Supervisor
+- Student (Examinee)
+
+
+*************************************
+**System Requirement Specifications**
+*************************************
+
+R1: Admin Functionalities
+    R1.1 Login
+        Input: User login credentials.
+        Output: Confirmation of Authorization and redirect to dashboard.
+        Exception Flow: If credentials are not met, redirect to login page.
+
+    R1.2 Manage Users
+        R1.2.1 Add User
+            Input: User Details.
+            Output: Confirmation of user creation.
+            Exception Flow: If details are invalid. validation message is show.
+        
+        R1.2.2 Edit User
+            Input: Updated Details.
+            Output: Confirmation of user details updation.
+            Exception Flow: If details are invalid. validation message is show.
+        
+        R1.2.3 Delete User
+            Input: User selection.
+            Output: Confirmation of user deletion.
+        
+        R1.2.4 View User Details
+            Input: User selection.
+            Output: Details of user.
+            
+    R1.3 Manage Exam
+        R1.3.1 Block Exam schedule.
+            Input: Scheduled exam selection.
+            Output: Confirmation of blocking exam schedule.
+
+        R1.3.2 Update Exam Schedule
+            Input: Updated schedule details for an exam.
+            Output: Confirmation of exam schedule updation.
+    
+    R1.4 Manage User Role
+        R1.4.1 Define User Role
+            Input: Selection of user role.
+            Output: Confirmation of user role updation.
+            Exception Flow: If user role is not available, detailed message is thrown.
+
+    R1.5 Manage Users
+        R1.5.1 Add User
+            Input: User Details.
+            Output: Confirmation of user creation.
+            Exception Flow: If details are invalid. validation message is show.
+        
+        R1.5.2 Edit User
+            Input: Updated Details.
+            Output: Confirmation of user details updation.
+            Exception Flow: If details are invalid. validation message is show.
+        
+        R1.5.3 delete User
+            Input: User selection.
+            Output: Confirmation of user deletion.
+        
+        R1.5.4 View User Details
+            Input: User selection.
+            Output: Details of user.
+
+R2: Exam Setter Functionalities
+    R2.1 Login
+    Input: User Credentials
+    Output: Confirmation of authorization and redirect to Dashboard
+    Exception Flow: If Credentials are not met, redirect to login page.
+
+    R2.2 Manage Exams
+        R2.2.1 Add Exam
+        Input: Exam details including questions, questions type, Correct Answers, Weight
+        Output: Confirmation
+
+        R2.2.2 View Exams
+        Input: User Command
+        Output: List of exams for current user
+
+        R2.2.3 Update Exam
+        Input: Exam details
+        Output: Confirmation
+
+        R2.2.4 Delete Exam
+        Input: User Selection
+        Output: Confirmation of Deletion
+
+    R2.3 Manage Exam Schedules
+        R2.3.1 Schedule An Exam
+        Input: Exam and Schedule details
+        Output: Confirmation
+
+        R2.3.2 Re-Schedule An Exam
+        Input: User Selection
+        Output: Confirmation
+
+        R2.3.3 Delete Exam Schedule
+        Input: User Selection
+        Output: Confirmation
+
+        R2.3.4 View Exam Schedules
+        Input: user Command
+        Output: List of Exam Schedules
+
+        R2.3.5 Add Supervisor for the Schedule
+        Input: Supervisor List
+        Output: Confirmation and Notification to the concerned user for supervision
+
+    R2.4 Manage Results
+        R2.4.1 Add Result
+        Input: Exam and result details
+        Output: Confirmation
+
+        R2.3.2 Update Result
+        Input: User Selection and details
+        Output: Confirmation
+
+        R2.3.3 Delete Result
+        Input: User Selection
+        Output: Confirmation
+
+        R2.3.4 View Result
+        Input: Exam details
+        Output: Result for the Selected exams
+
+        R2.3.5 Broadcast Result
+        Input: User Command
+        Output: Notification to all examinees
+        Description: Notification about the result will be sent to all examinees for that exam.
+
+    R2.5 Manage Reports
+        R2.5.1 Generate Report
+        Input: User Command
+        Output: Generated Report for examinees' performance and exam statistics
+
+        R2.5.2 View Report
+        Input: User Selection
+        Output: Report details for given Selection
+
+        R2.5.3 Download Report
+        Input: User Selection
+        Output: Download Report
+
+R3 Supervisor Functionalities
+    R3.1 Login
+    Input: User Credentials
+    Output: Confirmation of authorization and redirect to Dashboard
+    Exception Flow: If Credentials are not met, redirect to login page.
+
+    R3.2 View supervision Schedules
+    Input: User Selection
+    Output: List of supervisions scheduled
+
+    R3.3 Report Supervision Schedule
+    Input: User Selection
+    Output: Notification sent to Exam Setter.
+
+    R3.4 Start Exam
+    Input: User Selection
+    Output: Secret key to start exam on examinee's machine
+    Description: Supervisor can get the secret key and pass it to the examinees to decrypt the exam.
+
+    R3.5 Block a examinee
+    Input: User Selection
+    Output: Block the exam for given examinee
+
+    R3.6 Report Misconduct
+    Input: User Selection
+    Output: Notification to admin and exam Setter
+
+R4: Examinee Functionalities
+    R4.1 Login
+        Input: User login credentials.
+        Output: Confirmation of Authorization and redirect to dashboard.
+        Exception Flow: If credentials are not met, redirect to login page.
+
+    R4.2 Manage Exams
+        R4.2.1 View Exam Details.
+            Input: Exam Selection.
+            Output: Exam Details.
+        
+        R4.2.2 Opt-in an exam
+            Input: Selection of exam to opt-in.
+            Output: Opt-in sign.
+        
+        R4.2.3 Start Exam
+            Input: Exam initiation key.
+            Output: Question paper.
+        
+        R4.2.4 End Exam
+            Input: Submition of answers.
+            Output: Confirmation of submition.
+    
+    R4.3 View profile.
+        R4.3.1 View profile.
+            Input: User Command.
+            Output: Profile of examinee.
+    
+    R4.4 Manage Answers.
+        R4.4.1 Set answer.
+            Input: User selection.
+            Output: Confirmation for answer set.
+        
+        R4.4.2 Flag answer.
+            Input: User Command.
+            Output: Confirmation for answer flag.

@@ -1,4 +1,4 @@
-User:
+Users:
 - Admin 
 - Exam Setter
 - Supervisor
@@ -14,7 +14,6 @@ Major Functionalities:
 - Admin can manage exams and users without any permissions.
 - Students can take an exam.
 
-
 Scope:
 - The System can be useful as practical implementation of exam for Quizes, Lab Tests, Code submissions, MCQ practice test, etc.
 - The System is capable enough to handle the traffic of multiple users taking multiple exams in the university. 
@@ -28,4 +27,6 @@ Limitations:
 - It doesn't supports diagrams and long-form answers.
 
 Future Aspects:
-We aim to productionize the system to make it available to other universities as well. Product can be scaled up using advanced databases. Data science and AI techniques can be applied to judge and improve examinee's performance.
+- We aim to productionize the system to make it available to other universities as well. 4
+- The System can be scaled up using advanced databases. 
+- Data science and AI techniques can be applied to judge and improve examinee's performance.
