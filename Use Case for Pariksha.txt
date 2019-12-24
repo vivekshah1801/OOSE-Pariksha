@@ -1,0 +1,63 @@
+User Case #1 : User can register
+Description: User who is not registered with the system, registers to the system and adds his/her details.
+Actors: Examinee, Exam Setter, Supervisor
+Preconditions: User is not registered with the system
+Basic Flow: User enters the details
+Alternate Flow: User turns out to be an existing user and redirected to login page
+Postconditions: User is registered with the system
+
+User Case #2 : Add Exam
+Description: User can add the exams by giving detials of exam planned.
+Actors: Exam Setter
+Preconditions: User is authenticated to add exam
+Basic Flow: User adds exam time, exminees, questions numbers and description
+Alternate Flow: 
+Postconditions: Exam is registered in the system
+
+User Case #3 : Add question
+Description: User can add questions to the exam
+Actors: Exam Setter
+Preconditions: Exam is created with the system
+Basic Flow: User enters question,its type and wightage of that question
+Alternate Flow: User is prompted if the total marks of exam or number of questions is exceeded.
+Postconditions: Question is added to the exam
+
+User Case #4 : Add Option
+Description: User can add option to a question for MCQ question
+Actors: Exam Setter
+Preconditions: Question is associated in the system and its of MCQ type
+Basic Flow: User enters option
+Alternate Flow: If user enters zero options to a MCQ type question
+Postconditions: Option is added to the system
+
+User Case #5 : Add Solution
+Description: Exam Setter can add solution to the question
+Actors: Exam Setter
+Preconditions: Question is registered with the system
+Basic Flow: User enters correct answer and additionally adds the notes for solution
+Alternate Flow: 
+Postconditions: Solution is associated with the question
+
+User Case #6 : Schedule Exam
+Description: Exam Setter can schedule an exam
+Actors: Exam Setter
+Preconditions: Exam is created with the system
+Basic Flow: User provides time, date and Supervisor to for the exam schedule.
+Alternate Flow: Exam is already scheduled with same time and Supervisor, then exam setter is redirected to that schedule
+Postconditions: Exam Schedule is added for the exam
+
+User Case #7 : Re-Schedule Exam
+Description: Exam Setter can re-schedule an exam on other time and Supervisor
+Actors: Exam Setter
+Preconditions: Exam schedule is created with the system
+Basic Flow: Exam setter gives other time and supervisor for rescheduling
+Alternate Flow: Other exam is already scheduled with same time and Supervisor, then exam setter is redirected to the home
+Postconditions: Exam is rescheduled
+
+User Case #8 : Block Exam Schedule
+Description: Exam Setter and Admin can block the Scheduled Exam
+Actors: Exam Setter, Admin
+Preconditions: Exam schedule is added to the system
+Basic Flow: User will be asked for the confirmation to delete the Exam schedule
+Alternate Flow: An exception is displayed if the exam session is already started
+Postconditions: Exam Schedule is blocked
