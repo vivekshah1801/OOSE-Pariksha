@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>216</y>
+      <w>200</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Admin
+--
+
+--
+DeleteExam():void
+RemoveExamSchedule(e:Exam):void
+changeRoles():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>0</y>
+      <w>304</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Exam Setter
+--
+-Department: String
+--
+AddExam():void
+UpdateExam():void
+DeleteExam():void
+ViewExams():List&lt;Exam&gt;
+SetExamSchedule(e:Exam):void
+UpdateExamSchedule(e:Exam):void
+RemoveExamSchedule(e:Exam):void
+ViewExamSchedule(e:Exam):List&lt;ExamSchedule&gt;
+AddResult(e:ExamSchedule):void
+SetSuperVisor(s:Supervisor,e:ExamSchedule&gt;:void
+RemoveSuperVisor(s:Supervisor,e:ExamSchedule&gt;:void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>24</y>
+      <w>200</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-id: Long
+-Name: String
+-Password :String
+-Username: String
+--
+Login():void
+SignUp():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>16</y>
+      <w>200</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>Examinee
+--
+-Semester:Integer 
+-Branch: String
+--
+TakeExam(e:ExamSchedule):void
+CheckResult(e:ExamSchedule):void
+UpdateProfile():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>344</x>
+      <y>520</y>
+      <w>200</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>Exam
+--
+-id: Long
+-Name: String
+-Description :String
+-NumberOfQuestion: Long
+-MaximumMarks: Long
+-IsMandatory:Boolean
+-ExamSetterId: ExamSetter
+-Questions:List&lt;Question&gt;
+--
+AddQuestion(q:Question):void
+RemoveQuestion(q:Question):void
+UpdateQuestion(q:Question):void
+ViewQuestions():List&lt;Question&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>520</y>
+      <w>200</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Question
+--
+-id: Long
+-Text: String
+-Type: String
+-Marks: Integer
+-Options: List&lt;Option&gt;
+--
+AddOption(o:Option):void
+UpdateOption(o:Option):void
+RemoveOption(o:Option):void
+ViewOption():List&lt;Option&gt;
+MarkCorrectOption(o:Option):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>216</y>
+      <w>280</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Supervisor
+--
+
+--
+StartExam(e:ExamSchedule):void
+EndExam(e:ExamSchedule):void
+TakeAttendance(e:ExamSchedule):void
+ReportExaminee(e:ExamSchedule, s:Examinee):void
+RemoveExamSchedule(e:Exam):void
+changeRoles():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>536</y>
+      <w>200</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Option
+--
+-id: Long
+-Text: String
+--
+SelectOption(o:Option):void
+DeselectOption(o:Option):void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
